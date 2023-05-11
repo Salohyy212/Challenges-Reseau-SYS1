@@ -1,0 +1,17 @@
+#Enoncé
+Une session d’authentification twitter a été capturée. Retrouvez le mot de passe de l’utilisateur dans cette capture réseau.
+#Première étape:
+       Démarrer le challenge afin de télécharger le fichier "ch3.pcap", puis l'ouvrir sur wireshark.
+#Deuxième étape:
+       Clic droit sur le protocole HTTP, suivre son flux HTTP.
+       Vous trouverez le mot de passe codé en base64 à coté de Authorization: Basic, il faut donc le décoder sur "Base64decode".
+       
+Accept: */*
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Authorization: Basic ***********************=
+Connection: keep-alive
+Host: twitter.com
+
+Aprés décodage:
+  usertest:********
