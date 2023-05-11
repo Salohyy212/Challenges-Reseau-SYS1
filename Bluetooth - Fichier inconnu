@@ -4,12 +4,15 @@ Votre ami travaillant à l’ANSSI a récupéré un fichier illisible dans l’o
 La réponse est le hash SHA1 de la concaténation de l’adresse MAC (en majuscules) et du nom du téléphone.
 
 Exemple :
-AB:CD:EF:12:34:56monTelephone -> 836eca0d42f34291c5fefe91010873008b53c129
+      AB:CD:EF:12:34:56monTelephone -> 836eca0d42f34291c5fefe91010873008b53c129
 
 #Première étape:
    Démarrer le challenge,afin de télécharger le fichier "ch18.bin"
 #Deuxième étape:
    Ouvrir le fichier dans wireshark, clic sur wireless puis clic sur equipements bluetooth.
-   Vous y trouverez l'addresse MAC et le nom du téléphone.Aprés,il faut le chiffré en hash SHA1.
+   Vous y trouverez l'addresse MAC et le nom du téléphone.
    
-   0c:b3:19:b9:4f:c6SamsungEQT-S7390G -> 01d791cf44de0019a93a931a6d22990c12908633
+      0c:b3:19:b9:4f:c6 QT-S7390G 
+#Troisième étape:
+   Concaténer l'addresse MAC et le nom du téléphone puis crypter en hash SHA1.
+      0C:B3:19:B9:4F:C6GT-S7390G -> ****************************************
